@@ -17,8 +17,8 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "94a808b219d66e0037ca18ff0d634878",
-"/": "94a808b219d66e0037ca18ff0d634878",
+"index.html": "59958be05611c75b7f67f9bf9e8499b3",
+"/": "59958be05611c75b7f67f9bf9e8499b3",
 "main.dart.js": "c32f9cd7de7e416db0b800f6761dfcac",
 "manifest.json": "9f60adce90c5959cecb2ebc3ac206702",
 "version.json": "47a85e15222e002dd3a12ec2335406f9"
@@ -38,7 +38,7 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
-      return cache.addAll(
+       cache.addAll(
         CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
